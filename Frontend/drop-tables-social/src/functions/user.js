@@ -1,4 +1,4 @@
-const url = 'https://droptables.azurewebsites.net/api/User/';
+const url = 'http://localhost:5001/api/User/';
 
 export const getUserLogin = async (username) => {
     try {

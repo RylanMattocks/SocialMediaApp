@@ -12,7 +12,7 @@ function PostPopulator(){
     useEffect(() => {
         async function loadPosts()  {
           try {
-            fetch("https://droptables.azurewebsites.net/api/Post")
+            fetch("http://localhost:5001/api/Post")
           .then(response => response.json())
           .then(data => setPosts(data))
           } catch {
@@ -34,7 +34,7 @@ function PostPopulator(){
           return;
         }
         try {
-          const response = await fetch(`https://droptables.azurewebsites.net/api/User/${id}`);
+          const response = await fetch(`http://localhost:5001/api/User/${id}`);
           const userData = await response.json();
           setUsers(prevUsers => ({ ...prevUsers, [id]: userData }));
         } catch (error) {

@@ -6,7 +6,7 @@ export default function LikeButton({postId, onChange}){
 
     const handleClick = async () => {
         try{
-            const postLikeUrl = "https://droptables.azurewebsites.net/api/User/"+currentUser.userId+"/post/"+postId;
+            const postLikeUrl = "http://localhost:5001/api/User/"+currentUser.userId+"/post/"+postId;
             const response = await fetch(postLikeUrl, {
                 method: "POST"
             });

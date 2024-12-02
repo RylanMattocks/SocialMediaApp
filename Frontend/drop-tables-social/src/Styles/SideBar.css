@@ -4,8 +4,8 @@
     font-weight: 400;
     font-style: normal;
     padding: 20px; /* Padding for spacing */
-    position: absolute; /* Keep it fixed to the viewport */
-    top: 185px; /* Adjust this value based on your navbar height */
+    position: fixed; /* Keep it fixed to the viewport */
+    top: 135px; /* Adjust this value based on your navbar height */
     left: -390px; /* Start off-screen */
     width: 300px;
     background-color: #162F65;

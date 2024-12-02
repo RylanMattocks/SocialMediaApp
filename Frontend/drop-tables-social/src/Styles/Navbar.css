@@ -74,7 +74,6 @@ li a:hover {
     display: flex;
     align-items: left;
     float: left;
-    margin-block: auto;
 }
 
 #logo a {
@@ -108,16 +107,6 @@ li a:hover {
     margin-right: 25px;
 }
 
-#avatarSection ul {
-    margin-block: 5px;
-    align-items: center;
-}
-
-#avatarSection ul li button{
-    margin-top: 50px;
-    margin-left: 20px;
-}
-
 /* Removed the @keyframes hoverLi as it's no longer used */
 #hamburger {
     display: flex;
@@ -130,8 +119,7 @@ li a:hover {
     padding-left: 30px;
     padding-right: 20px;
     float: left;
-    padding-top: 9px;
-    margin-block: auto;
+    padding-top: 35px;
 }
 
 #hamburger span {

@@ -1,4 +1,4 @@
-const url = 'https://droptables.azurewebsites.net/api/Post/';
+const url = 'http://localhost:5001/api/Post/';
 
 export const createPost = async (userId, content, imageURL) => {
     try {

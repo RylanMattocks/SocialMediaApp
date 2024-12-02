@@ -6,7 +6,7 @@ export default function UnfollowButton({userId}){
 
     const handleClick = async () => {
         try{
-            const postFollowUrl = "https://droptables.azurewebsites.net/api/User/"+currentUser.userId+"/user/"+userId;
+            const postFollowUrl = "http://localhost:5001/api/User/"+currentUser.userId+"/user/"+userId;
             const response = await fetch(postFollowUrl, {
                 method: "DELETE"
             });
