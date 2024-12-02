@@ -1,0 +1,37 @@
+.profile-info {
+    background-color: #193775;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-avatar {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border-radius: 10%;
+    border: 10px solid white;
+    flex-shrink: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+
+}
+
+.profile-about {
+    width: 30%;
+    margin: 5%;
+}
+
+.profile-about h3 {
+    text-transform: uppercase;
+}

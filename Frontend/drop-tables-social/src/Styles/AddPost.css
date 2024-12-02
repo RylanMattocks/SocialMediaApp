@@ -1,0 +1,60 @@
+/* General styles for the popup */
+.add-post-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Add an overlay to darken the background */
+.add-post-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* Default to hidden */
+}
+
+/* Show the popup and overlay when open */
+.add-post-popup.open,
+.add-post-overlay.open {
+    display: block;
+}
+
+/* Style for the form inside the popup */
+.add-post-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-post-popup input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-post-popup button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-post-popup button:hover {
+    background-color: #0056b3;
+}

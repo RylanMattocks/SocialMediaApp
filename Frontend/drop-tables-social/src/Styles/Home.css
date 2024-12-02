@@ -1,0 +1,10 @@
+#load-more {
+    background-color: #3361AC;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#load-more:hover {
+    background-color: #1856B3;
+}

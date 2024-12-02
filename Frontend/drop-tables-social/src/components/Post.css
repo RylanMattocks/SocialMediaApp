@@ -1,0 +1,65 @@
+.post {
+    background-color: #E8C766;
+    border-radius: 40px;
+    margin: 30px;
+}
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #E8AF30;
+    border-radius: 20px 20px 0px 0px;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+.post-user-info {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+.post-content {
+    display: flex;
+    padding: 20px;
+    justify-content:flex-start
+}
+.post-interactions {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+.post-interactions p {
+    padding-inline: 10px;
+}
+.post-interactions button {
+    margin-inline: 20px;
+}
+.post-interactions div {
+    margin-right: 20px;
+}
+
+/* 
+CSS to create heart shape obtained here
+https://stackoverflow.com/questions/17386168/how-to-create-a-heart-shape-using-css
+*/
+.heart {
+    display: inline-block;
+    width: 50px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+.post button {
+    background-color: #0F2043;
+    border-radius: 40px;
+}
+.post-user-info img {
+    background-color: #E7E6DD;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    border-radius: 50%;
+}

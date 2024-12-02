@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropTablesSocial", "DropTablesSocial.API\DropTablesSocial.csproj", "{06D8A9D0-53AD-4E7B-A10F-563E70F980FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropTablesSocial.Data", "DropTablesSocial.Data\DropTablesSocial.Data.csproj", "{A6636830-0333-4CE9-9912-F5FBACB80930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropTablesSocial.Models", "DropTablesSocial.Models\DropTablesSocial.Models.csproj", "{CA674692-2DFA-42E2-96AA-CA0036C466CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropTablesSocial.Tests", "DropTablesSocial.Tests\DropTablesSocial.Tests.csproj", "{2FE91C6C-D953-42AF-9F6C-1160ACA45E9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06D8A9D0-53AD-4E7B-A10F-563E70F980FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D8A9D0-53AD-4E7B-A10F-563E70F980FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D8A9D0-53AD-4E7B-A10F-563E70F980FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D8A9D0-53AD-4E7B-A10F-563E70F980FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6636830-0333-4CE9-9912-F5FBACB80930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6636830-0333-4CE9-9912-F5FBACB80930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6636830-0333-4CE9-9912-F5FBACB80930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6636830-0333-4CE9-9912-F5FBACB80930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA674692-2DFA-42E2-96AA-CA0036C466CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA674692-2DFA-42E2-96AA-CA0036C466CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA674692-2DFA-42E2-96AA-CA0036C466CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA674692-2DFA-42E2-96AA-CA0036C466CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE91C6C-D953-42AF-9F6C-1160ACA45E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE91C6C-D953-42AF-9F6C-1160ACA45E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE91C6C-D953-42AF-9F6C-1160ACA45E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE91C6C-D953-42AF-9F6C-1160ACA45E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

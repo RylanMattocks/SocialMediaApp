@@ -1,0 +1,77 @@
+.register-page { 
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 2em;
+    border-radius: 10px;
+    -webkit-box-shadow: -3px 2px 40px 12px rgba(232, 199, 102, 0.6);
+    -moz-box-shadow: -3px 2px 40px 12px rgba(232, 199, 102, 0.6);
+    box-shadow: -3px 2px 40px 12px rgba(232, 199, 102, 0.6);
+    font-family: "Bree Serif", serif;
+    background-color: #E8AF30;
+
+}
+.last  { 
+    margin-bottom: 1em;
+}
+
+.register-page form { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the start (left) */
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    color: black;
+    margin-bottom: 0.5em; /* Adds some space between label and input */
+}
+
+.form-group input {
+    width: 100%; /* Ensures input takes full width of the container */
+}
+
+.register-page  h2 { 
+    color: white;
+}
+
+.register-page button {
+    transition: border-color 0.6s ease-in, background-color 0.6s ease-in, color 0.3s ease-in;
+    border: 2px solid transparent;
+}
+
+.register-page button:hover {
+    border: 2px solid #85AFE8;
+    background-color: #0F2043;
+    color: white;
+    cursor: pointer;
+}
+
+.register-page input { 
+    width: 100px;
+    padding: 12px 20px; 
+    border-radius:5px; 
+     font-family: "Bree Serif", serif;
+}
+
+.container { 
+    background-color: #85AFE8;
+    height: 100vh;
+    padding: 100px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

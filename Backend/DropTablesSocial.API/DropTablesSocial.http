@@ -1,0 +1,6 @@
+@DropTablesSocial_HostAddress = http://localhost:5001
+
+GET {{DropTablesSocial_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

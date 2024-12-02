@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: Noto Sans, sans-serif;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li.active {
+    background-color: #96C3FF;
+    color: white;
+  }

@@ -1,0 +1,63 @@
+
+.sidebar {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px; /* Padding for spacing */
+    position: absolute; /* Keep it fixed to the viewport */
+    top: 185px; /* Adjust this value based on your navbar height */
+    left: -390px; /* Start off-screen */
+    width: 300px;
+    background-color: #162F65;
+    transition: left 0.3s ease-in-out, border-color 0.6s ease-in-out;
+    z-index: 1000;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the start */
+    align-items: center; /* Center items horizontally */
+    
+    /* Allow scrolling if content exceeds height */
+    max-height: calc(100vh - 235px); /* Adjust based on your navbar height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.sidebar.open {
+    left: 0; /* Slide in when open */
+}
+
+label {
+    color: white; /* Label color */
+    font-size: 20px; /* Label font size */
+    margin-bottom: 10px; /* Space below label */
+}
+
+#searchBar {
+    padding: 5px; /* Padding inside the input */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    width: 80%; /* Width of the input field */
+    margin-bottom: 20px; /* Space below input field */
+}
+
+.sidebar ul {
+    margin-bottom: 20px;
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.sidebar li {
+    margin-bottom: 15px; /* Space between items */
+}
+
+.sidebar a {
+    color: white; 
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Optional hover effect */
+}

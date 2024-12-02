@@ -1,0 +1,65 @@
+name: Build and deploy container app to Azure Web App - DropTables
+#adjusted
+# Define the events that will trigger this workflow
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+    paths:
+      - Backend/**  # Trigger only if there are changes in the Backend directory
+      - '!Frontend/**'  # Exclude changes in the Frontend directory from triggering this workflow
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests targeting the main branch
+    paths:
+      - Backend/**  # Trigger only if there are changes in the Backend directory
+      - '!Frontend/**'  # Exclude changes in the Frontend directory from triggering this workflow
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'  # Use the latest Ubuntu environment for the job
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2  # Step to check out code from the repository
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2  # Set up Docker Buildx for building multi-platform images
+
+    - name: Build Docker Image
+      run: |
+        # Build the Docker image and tag it with a specific version number
+        docker build -t koalacoder/droptables:0.0.3 -f ./Backend/Dockerfile Backend/
+
+    - name: Log in to Docker Registry
+      uses: docker/login-action@v2
+      with:
+        registry: https://index.docker.io/v1/
+        username: ${{ secrets.AzureAppService_ContainerUsername }}
+        password: ${{ secrets.AzureAppService_ContainerPassword }}
+
+    - name: Push Docker Image
+      run: |
+        docker push koalacoder/droptables:0.0.3
+
+  deploy:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment for deployment job
+    needs: build  # Ensure this job runs after the build job
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2  # Checkout code again for deployment step
+
+    - name: Check Secrets (Debug)
+      run: |
+        echo "Username: ${{ secrets.AzureAppService_ContainerUsername }}"
+        echo "Password: ${{ secrets.AzureAppService_ContainerPassword }}"
+
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'DropTables'  # Ensure this matches your Azure Web App name
+        slot-name: 'production'  # Specify the deployment slot if applicable
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile }}  # Simplified secret reference
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername }}/droptables:0.0.3'

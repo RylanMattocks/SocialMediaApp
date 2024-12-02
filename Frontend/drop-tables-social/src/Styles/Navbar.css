@@ -1,0 +1,149 @@
+nav {
+    position: relative;
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 10px;
+    background-color: #0F2043;
+    display: flex;
+    justify-content:space-around;
+}
+
+#navList {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-inline: auto;
+}
+
+li {
+    float: right;
+
+}
+
+#navButtonsItem{
+    float:left;
+}
+
+li a {
+    color: rgb(255, 255, 255);
+    padding: 18px 24px;
+    text-decoration: none;
+    font-size: 32px;
+    border-radius: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+#navButtons {
+    gap: 20px;
+    align-items: center;
+}
+
+@keyframes hoverLi {
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+li a:hover {
+    animation: hoverLi 0.5s ease-out forwards;
+    background-color: #ffcc5d;
+    color: #020d22;
+}
+
+.navButton a.active {
+    background-color: #96C3FF;
+    color: white;
+}
+
+#navButtons ul {
+    display: block;
+    list-style-type: none;
+}
+
+#navButtons ul li {
+    float: left;
+    margin-inline: 10px;
+}
+
+#logo {
+    display: flex;
+    align-items: left;
+    float: left;
+    margin-block: auto;
+}
+
+#logo a {
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+#dropTable {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #85AFE8;
+}
+
+#avatar {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#avatar:hover {
+    animation: hoverLi 0.5s ease-out forwards;
+    box-shadow: 0 0 10px #77787a, 0 0 20px #404141, 0 0 30px #96C3FF;
+}
+
+#avatarSection {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#avatarSection ul {
+    margin-block: 5px;
+    align-items: center;
+}
+
+#avatarSection ul li button{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+/* Removed the @keyframes hoverLi as it's no longer used */
+#hamburger {
+    display: flex;
+    /* Always display the hamburger */
+    flex-direction: column;
+    cursor: pointer;
+    left: 5%;
+    bottom: 5%;
+    z-index: 1000;
+    padding-left: 30px;
+    padding-right: 20px;
+    float: left;
+    padding-top: 9px;
+    margin-block: auto;
+}
+
+#hamburger span {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 980px) {
+    #navButtons {
+        display: none;
+    }
+    
+}
